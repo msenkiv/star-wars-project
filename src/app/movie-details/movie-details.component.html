@@ -1,0 +1,40 @@
+
+<div  *ngIf="!loading">
+<app-title title="{{movieData.title}}"></app-title>
+<div class="font-bold text-xl text-left mb-2 ml-16 mt-8"style="margin-left: 25vw;">Descriçāo</div>
+
+    <div class="w-50 flex justify-center">
+        <div class="flex justify-center">
+            <div class="w-1/2 mr-20" style="margin-left: 25vw;">
+            <div class="text-gray-700 text-base">{{movieData.opening_crawl}}</div>
+            <div class="text-gray-700 text-base mt-8 flex justify-between">
+                <p class="font-bold">Data de lançamento</p>
+                <p>{{movieData.release_date}}</p>
+            </div>
+            <div class="flex space justify-between mt-5">
+                <div> 
+                    <p class="font-bold">Diretor</p>
+                    <p>{{movieData.director}}</p>
+                </div>
+                <div>       
+                    <p class="font-bold">Produtor</p>
+                    <p class="text-right">{{movieData.producer}}</p>
+                </div>
+
+            </div>
+            </div>
+            <div class="w-1/2">
+                <img class="w-full card-movie" src="../assets/episode_{{movieData.episode_id}}.jpg" alt="Sunset in the mountains">
+            </div>
+          </div>
+    </div>
+    <app-title title="Character of movie"></app-title>
+    <app-movie-characters [charactersUrls]="characters"></app-movie-characters>
+    <app-title title="Write a Review"></app-title>
+    <app-review></app-review>
+</div>
+
+<app-loading-icon *ngIf="loading"></app-loading-icon>
+
+<router-outlet></router-outlet>
+

@@ -1,0 +1,26 @@
+<div *ngIf="!loading">
+  <app-title title="Characters"></app-title>
+  <div class="flex justify-center mt-5 mb-5">
+      <button class="prev-button mr-4" (click)="prev()">   
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M15 18l-6-6 6-6"/>
+        </svg></button>
+   
+      <div *ngFor="let character of characterData"class="max-w-sm rounded overflow-hidden shadow-lg mr-5">
+        <div class="px-6 py-4">
+          <div class="font-bold text-xl mb-2">{{character.name}}</div>
+          <p class="text-gray-700 text-base">
+            Data de nascimento: {{character.birth}}
+          </p>
+          <p class="text-gray-700 text-base">
+            Altura: {{character.height}} cm
+          </p>
+        </div>
+      </div>
+      <button class="next-button" (click)="next()">
+          <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M9 18l6-6-6-6"/>
+          </svg>
+        </button>
+    </div>
+</div>

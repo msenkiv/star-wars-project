@@ -1,0 +1,28 @@
+<div *ngIf="!loading" >
+<app-title title="Movies"></app-title>
+<div class="flex justify-center mt-5 mb-5">
+  <button class="prev-button absolute top-1/2 left-20 ml-20 transform -translate-y-1/2" (click)="prev()">   
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M15 18l-6-6 6-6"/>
+  </svg></button>
+  <button class="next-button absolute top-1/2 right-20 mr-28 transform -translate-y-1/2" (click)="next()">
+    <svg class="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M9 18l6-6-6-6"/>
+    </svg>
+  </button>
+  <div *ngFor="let movie of carouselData" class="max-w-sm rounded overflow-hidden shadow-lg mr-5" (click)="handleCardClick(movie)">
+    <img class="w-full card-max-h" src="{{movie.url}}" alt="Sunset in the mountains">
+    <div class="px-6 py-4">
+      <div class="font-bold text-xl mb-2">{{movie.name}}</div>
+      <p class="text-gray-700 text-base">
+        Data de Lançamento: {{movie.resealeData}}
+      </p>
+      <p class="text-gray-700 text-base">
+        Diretor: {{movie.director}}
+      </p>
+    </div>
+  </div>
+</div>
+</div>
+
+<app-loading-icon *ngIf="loading"></app-loading-icon>

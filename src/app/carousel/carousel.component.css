@@ -1,0 +1,9 @@
+.card-max-h{
+    max-height: 50vh;
+    min-height: 50vh;
+}
+.max-w-sm:hover {
+    box-shadow: 0 0 5px #000;
+    cursor: pointer;
+  }
+  
