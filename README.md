@@ -1,4 +1,6 @@
 # StarWarsProject
+![rec](https://user-images.githubusercontent.com/37120037/224219590-2c6149cd-eaa0-484b-b238-b34e0eaffe22.gif)
+
 
 - This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
 - Este projeto utiliza a versao 18.15 do node.js
